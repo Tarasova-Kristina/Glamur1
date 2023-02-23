@@ -1,0 +1,94 @@
+﻿<Window x:Class="Glamur1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Glamur1"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid x:Name="one"
+        MouseDown="one_MouseDown"
+          Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="img\Background.jpg"
+               Height="450"
+               Width="800"
+               Opacity="0.6" Grid.ColumnSpan="2"
+               />
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="5 5 0 0" Grid.ColumnSpan="2"
+                    
+                >
+
+            <Image Source="img\Logo.png"
+               Height="50"
+               
+               />
+            <TextBlock Text="Магазин косметики" 
+                       FontSize="18" 
+                       Margin="0 20 0 0" 
+                       />
+
+            <TextBlock Text="Be beautiful" 
+                       FontSize="18" 
+                       Margin="10 20 0 0"
+                       Foreground="Green"
+                       FontWeight="Black"
+                       
+                       />
+        </StackPanel>
+        <TextBlock 
+                       FontSize="36" 
+                       Margin="10,235,447,107"
+                       Foreground="Black" FontWeight="Bold" Grid.ColumnSpan="2" Text="Ваш путь к красоте &#xD;&#xA;"
+                   
+                       />
+        <TextBlock 
+                       FontSize="18" 
+                       Margin="10,290,0,0"
+                       Foreground="Black"
+                   Background="Transparent" Grid.ColumnSpan="2" FontStyle="Italic">
+            
+            <Run Text="Everything has beauty, but not everyone sees it"/><LineBreak/></TextBlock>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 20 0 0" Orientation="Horizontal" Width="340" Grid.ColumnSpan="2">
+            <Button Name="Product"
+                    Content="Товары"
+                    Background="Transparent"
+                    Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="20" VerticalContentAlignment="Center" Foreground="Black"
+                    Width="101"
+                    />
+            <Button Name="Brends"
+                    Content="Бренды"
+                    Background="Transparent"
+                    Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="20" VerticalContentAlignment="Center" Foreground="Black"
+                    Margin="0 0 0 0"
+                    Width="123"
+                    />
+            <Button Name="AboutUs"
+                    Content="О нас"
+                    Background="Transparent"
+                    Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="20" VerticalContentAlignment="Center" Foreground="Black"
+                    Width="83"
+                    />
+
+        </StackPanel>
+        <materialDesign:PackIcon Kind="Close"
+                                 Height="30"
+                                 Width="30"
+                                 HorizontalAlignment="Right"
+                                 Margin="0 5 5 0"
+                                 MouseDown="PackIcon_MouseDown"
+                                 Cursor="Hand" ToolTip="Закрыть" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
